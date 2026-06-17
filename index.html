@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Plantation Workforce Management System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage" class="login-page">
+
+<div class="login-container">
+
+<h1>🌿 AgriTrack Pro</h1>
+
+<p>Smart Plantation Workforce Management</p>
+
+<input type="text"
+id="username"
+placeholder="Admin Username">
+
+<input type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="login()">
+Login
+</button>
+
+</div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div id="dashboardPage"
+style="display:none;">
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+
+🌿 AgriTrack Pro
+
+</div>
+
+<ul>
+
+<li><a href="#dashboard">Dashboard</a></li>
+
+<li><a href="#workers">Workers</a></li>
+
+<li><a href="#attendance">Attendance</a></li>
+
+<li><a href="#tasks">Tasks</a></li>
+
+<li><a href="#gps">GPS</a></li>
+
+<li><a href="#reports">Reports</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Smart Plantation Workforce
+Management System
+</h1>
+
+<p>
+RFID Attendance | GPS Tracking |
+Task Management | Reports
+</p>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<h2>Dashboard</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fas fa-users"></i>
+
+<h3>Total Workers</h3>
+
+<h1 id="workerCount">
+0
+</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-user-check"></i>
+
+<h3>Present Today</h3>
+
+<h1 id="presentCount">
+0
+</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-list-check"></i>
+
+<h3>Tasks Assigned</h3>
+
+<h1 id="taskCount">
+0
+</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-chart-line"></i>
+
+<h3>Efficiency</h3>
+
+<h1 id="efficiency">
+100%
+</h1>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WORKER MANAGEMENT -->
+
+<section id="workers">
+
+<h2>Add Worker</h2>
+
+<div class="form-box">
+
+<input
+type="text"
+id="workerName"
+placeholder="Worker Name">
+
+<input
+type="text"
+id="workerId"
+placeholder="Worker ID">
+
+<input
+type="text"
+id="workerMobile"
+placeholder="Mobile Number">
+
+<input
+type="text"
+id="workerDept"
+placeholder="Department">
+
+<button onclick="addWorker()">
+Add Worker
+</button>
+
+</div>
+
+<table id="workerTable">
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Mobile</th>
+
+<th>Department</th>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- ATTENDANCE -->
+
+<section id="attendance">
+
+<h2>Attendance</h2>
+
+<div class="attendance-buttons">
+
+<button onclick="checkIn()">
+Check In
+</button>
+
+<button onclick="checkOut()">
+Check Out
+</button>
+
+</div>
+
+<table id="attendanceTable">
+
+<tr>
+
+<th>Time</th>
+
+<th>Status</th>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- TASK MANAGEMENT -->
+
+<section id="tasks">
+
+<h2>Task Assignment</h2>
+
+<div class="form-box">
+
+<input
+type="text"
+id="taskWorker"
+placeholder="Worker Name">
+
+<input
+type="text"
+id="taskName"
+placeholder="Task Name">
+
+<button onclick="assignTask()">
+Assign Task
+</button>
+
+</div>
+
+<table id="taskTable">
+
+<tr>
+
+<th>Worker</th>
+
+<th>Task</th>
+
+<th>Status</th>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- GPS -->
+
+<section id="gps">
+
+<h2>GPS Monitoring</h2>
+
+<div class="gps-box">
+
+<div class="worker-location">
+
+🟢 Worker A - Field A
+
+</div>
+
+<div class="worker-location">
+
+🟢 Worker B - Field B
+
+</div>
+
+<div class="worker-location">
+
+🟡 Worker C - Break
+
+</div>
+
+<div class="worker-location">
+
+🔴 Worker D - Offline
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REPORTS -->
+
+<section id="reports">
+
+<h2>Reports</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Total Workers</h3>
+
+<h1 id="reportWorkers">
+0
+</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Total Tasks</h3>
+
+<h1 id="reportTasks">
+0
+</h1>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
