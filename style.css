@@ -1,0 +1,311 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7f5;
+color:#333;
+}
+
+/* LOGIN PAGE */
+
+.login-page{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(
+135deg,
+#1b5e20,
+#43a047
+);
+}
+
+.login-container{
+background:white;
+padding:40px;
+width:350px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+text-align:center;
+animation:fadeIn 1s;
+}
+
+.login-container h1{
+color:#2e7d32;
+margin-bottom:10px;
+}
+
+.login-container p{
+margin-bottom:20px;
+color:#666;
+}
+
+.login-container input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.login-container button{
+width:100%;
+padding:12px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+}
+
+.login-container button:hover{
+background:#1b5e20;
+}
+
+/* NAVBAR */
+
+nav{
+background:white;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#2e7d32;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:#2e7d32;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+background:linear-gradient(
+rgba(0,0,0,0.5),
+rgba(0,0,0,0.5)
+),
+url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 8%;
+}
+
+section h2{
+text-align:center;
+margin-bottom:30px;
+color:#2e7d32;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:40px;
+color:#2e7d32;
+margin-bottom:15px;
+}
+
+.card h1{
+margin-top:10px;
+color:#2e7d32;
+}
+
+/* FORMS */
+
+.form-box{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+margin-bottom:30px;
+}
+
+.form-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.form-box button{
+width:100%;
+padding:12px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.form-box button:hover{
+background:#1b5e20;
+}
+
+/* TABLES */
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+th{
+background:#2e7d32;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+tr:hover{
+background:#f9f9f9;
+}
+
+/* ATTENDANCE */
+
+.attendance-buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.attendance-buttons button{
+padding:12px 25px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.attendance-buttons button:hover{
+background:#1b5e20;
+}
+
+/* GPS */
+
+.gps-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.worker-location{
+padding:15px;
+margin:10px 0;
+background:#f1f8e9;
+border-radius:10px;
+font-size:18px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:10px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
